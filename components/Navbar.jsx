@@ -4,13 +4,21 @@ import { AiOutlineShopping } from "react-icons/ai";
 
 import { Cart } from "./";
 import { useStateContext } from "../context/StateContext";
+import Image from "next/image";
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">Vdoh-logo</Link>
+        <Link href="/">
+          <Image
+            src="/../public/assets/logo.png"
+            alt="Logo"
+            width={160}
+            height={100}
+          />
+        </Link>
       </p>
 
       <button
